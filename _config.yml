@@ -33,7 +33,10 @@ github:
   username: github_username             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: xZdunek            # change to your twitter username
+  # username2: vinci1337
+twitter2:
+  username2: jrojewski
 
 social:
   # Change to your full name.
@@ -45,7 +48,7 @@ social:
     - https://twitter.com/username      # change to your twitter homepage
     - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
+    - https://twitter.com/username2
     # - https://www.linkedin.com/in/username
 
 google_site_verification:               # fill in to your verification string
