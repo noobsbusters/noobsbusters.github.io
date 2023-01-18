@@ -10,3 +10,97 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 @import "{{ site.theme }}";
 
 /* append your custom style below */
+
+.container{
+    text-align: center;
+}
+
+.team-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.team-member{
+    margin: 10px;
+    padding: 3px;
+    max-width: 45%;
+    cursor: pointer;
+    transition: 1s;
+    box-sizing: border-box;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.team-member:hover{
+    background: var(--topbar-wrapper-bg);
+}
+
+.team-member img{
+    width: 80%;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.name{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.design{
+    font-style: italic;
+    color: #999;
+
+}
+
+.about{
+    margin: 20px;
+    font-weight: lighter;
+}
+
+.social-links-about {
+  width: 100%;
+
+  $icon-block-size: 2rem;
+
+  a {
+    @include ml-mr(0.15rem);
+    height: $icon-block-size;
+    margin-bottom: 0.5rem; /* wrap line */
+    text-decoration: none;
+    color: rgba(117,117,117,.9);
+    border-bottom: none;
+  }
+
+  a:hover {
+    color: rgb(175, 176, 177);
+    border-bottom: none;
+  }
+
+  i {
+    background-color: var(--sidebar-btn-bg);
+    font-size: 1rem;
+    width: $icon-block-size;
+    height: $icon-block-size;
+    border-radius: 50%;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+    .team-member{
+        max-width: 100%;
+    }
+}

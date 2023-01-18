@@ -3,7 +3,29 @@ layout: page
 # The Archives of posts.
 ---
 
-
-<div>
-NBSTD to koty
-</div>
+<div class="container">
+		<div class="team-container">
+			<div class="team-member">
+				<img src="{{ page.avatar1 }}" alt="">
+				<div class="name">{{ page.memberName1 }}</div>
+				<div class="design">{{ page.memberPos1 }}</div>
+				<div class="about">{{ page.memberShortDesc1 }}</div>
+				<div class="social-links-about">
+					<a href="https://twitter.com/{{page.memberTweeter1}}"><i class="fa-brands fa-twitter"></i></a>
+					<a href="https://{{page.memberItch1}}.itch.io"><i class="fa-brands fa-itch-io"></i></a>
+					<a href="https://github.com/{{page.memberGithub1}}"><i class="fa-brands fa-github"></i></a>
+				</div>
+			</div>
+			<div class="team-member">
+				<img src="{{ page.avatar2 }}"  alt="">
+				<div class="name">{{ page.memberName2 }}</div>
+				<div class="design">{{ page.memberPos2 }}</div>
+				<div class="about">{{ page.memberShortDesc2 }}</div>
+					<div class="social-links-about">
+						<a href="https://twitter.com/{{page.memberTweeter2}}"><i class="fa-brands fa-twitter"></i></a>
+						<a href="https://{{page.memberItch2}}.itch.io"><i class="fa-brands fa-itch-io"></i></a>
+						<a href="https://github.com/{{page.memberGithub2}}"><i class="fa-brands fa-github"></i></a>
+					</div>
+			</div>
+		</div>
+	</div>
