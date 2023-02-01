@@ -4,16 +4,16 @@ icon: fas fa-info-circle
 order: 4
 
 
-avatar1: /assets/img/profile1.svg
+avatar1: https://pbs.twimg.com/profile_images/1326615565667082243/lM7XszY5_400x400.jpg
 avatar2: https://pbs.twimg.com/profile_images/1328097878779318273/DkK4s2cP_400x400.jpg
 
 memberName1: Jakub Rojewski
 memberName2: Lukasz Cieplak
 
-memberPos1: Developer
+memberPos1: Junior Unreal Engine Developer
 memberPos2: Self-taught UE developer
 
-memberShortDesc1: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+memberShortDesc1: I try my best to make my next project better. I like learning new things about Unreal Engine and C++. I have been working in the gaming industry since early 2021.
 memberShortDesc2: So far, I gained all the knowledge about UE thanks to self-made projects. 
 
 memberTweeter1: Vinci1337
