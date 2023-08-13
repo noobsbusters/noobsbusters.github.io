@@ -7,28 +7,28 @@ tags: [UMG, UI, CommonUI]
 img_path: /assets/img/Posts/CommonUI-intro/
 ---
 
-Common UI is a plugin which supports multi-plafrom UI development. It provides a functionality which helps to resolve complex cases with menu layers/submenus management. It makes it easier to control widgets with a gamepad. 
+Common UI is a plugin which supports multi-platfrom UI development. It provides a functionality which helps to resolve complex cases with menu layers/submenus management. It makes it easier to control widgets with a gamepad. 
 The plugin also enhances a couple of basic UMG widgets and introduces a bunch of new ones to unify the implementation as much as possible, no matter the target platform.
 
 <h4>Features:</h4>
-- introduces a menu stack and input routing functionality(top widget on the stack receives the input)
-- gives a possibility to specify common input actions(e.g common accept on PC keyboard can mapped to "Enter" and on gamepad to "A" button)
-- platform specific button icons(you can specify button brushes per each platform/controller, plugin will automaticaly change the brushes if you'll change a controller)
-- several new widgets, which helps to implement platform independent UI(e.g Common Hardware Visibility Border - hides/shows content on specific platform)
+- introduces a menu stack and input routing functionality (top widget on the stack receives the input)
+- gives a possibility to specify common input actions (e.g common accept on PC keyboard can mapped to "Enter" and on gamepad to "A" button)
+- platform specific button icons (you can specify button brushes per each platform/controller, plugin will automaticaly change the brushes if you'll change a controller)
+- several new widgets, which helps to implement platform independent UI (e.g Common Hardware Visibility Border - hides/shows content on specific platform)
 
 
-> This tutorial/documentation mostly explains the plugin usability on Windows platfrom(mainly UI implementation for gamepad and keyboard/mouse control). The true power of the plugin shows up if your project is intendet to build on various platforms(PS4/5, Xbox, NS, PC etc). I do not have a knowlege and posibility(external SDKs required) to show up UI implementation for other platform than Windows, but I hope it will be useful also for multi-platform projects.
+> This tutorial/documentation mostly explains the plugin usability on Windows platfrom (mainly UI implementation for gamepad and keyboard/mouse control). The true power of the plugin shows up if your project is intended to build on various platforms (PS4/5, Xbox, NS, PC etc). I do not have a knowledge and posibility (external SDKs required) to show up UI implementation for other platform than Windows, but I hope it will be useful also for multi-platform projects.
 {: .prompt-info }
 
 
 ## Plugin enabling
 
-Open plugins browser, `Edit > Plugins`, search for **Common UI Plugin** and enable it. Editor restart required after plugin enabling.
+Open plugins browser, `Edit > Plugins`, search for **Common UI Plugin** and enable it. Editor restart is required after plugin enabling.
 
 ![Desktop View](1.png){: .normal .shadow}
 _Plugin to be enabled_
 
-Under Project `Settings > General Settings > Default Classes`, set **Game Viewport Client Class** to **CommonGameVieportClient**. It mainly implements input routing functionality.
+Under `Project Settings > General Settings > Default Classes`, set **Game Viewport Client Class** to **CommonGameVieportClient**. It mainly implements input routing functionality.
 
 ![Desktop View](2.png){: .normal .shadow}
 _Class setting_
@@ -49,7 +49,7 @@ _Data table structure_
 
 Each action has a several options to be setup:
 - Display Name - this name can be displayed on a navigation bar
-- Hold Display Name - same as Display Name, but used during hold action
+- Hold Display Name - same as above but for hold action
 - Nav Bar Priority - allows you to set up an order of actions displayed on navigation bar
 - Keyboard Input Type Info - keyboard key mapping
 - Default Gamepad Input Type Info - gamepad key mapping
@@ -61,12 +61,12 @@ _Row config_
 
 ### CommonUIInputData
 
-The next step is to create a blueprint class based on the **CommonUIInputData** class. You can call it UIInputData. In this class you have to set up common click action and common back action.
+The next step is to create a blueprint class based on the **CommonUIInputData** class. You can call it UIInputData. In this class you have to set up Default Click Action and Common Back Action. 
 
 ![Desktop View](6.png){: .normal .shadow}
 _Parent class selection_
 
-These two actions have to be selected from a previously created data table.
+These two actions have to be selected from a previously created data table **CommonInputActionDataBase**.
 
 ![Desktop View](7.png){: .normal .shadow}
 _BP class settings_
@@ -78,12 +78,8 @@ Next, make a blueprint class based on the **CommonInputBaseControllerData** clas
 ![Desktop View](8.png){: .normal .shadow}
 _Parent class selection_
 
-The first one, created for a keyboard, stores icons for all keyboard keys.
-
 ![Desktop View](9.png){: .normal .shadow}
 _Keyboard brush settings_
-
-The second one, created for the gamepad, stores icons for all gamepad buttons.
 
 ![Desktop View](10.png){: .normal .shadow}
 _Gamepad brush settings_
